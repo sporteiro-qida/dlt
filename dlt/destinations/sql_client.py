@@ -74,7 +74,7 @@ class SqlClientBase(ABC, Generic[TNativeConn]):
 
     def has_dataset(self) -> bool:
         query = """
-SELECT 1
+    SELECT '1'
     FROM INFORMATION_SCHEMA.SCHEMATA
     WHERE """
         catalog_name, schema_name, _ = self._get_information_schema_components()
